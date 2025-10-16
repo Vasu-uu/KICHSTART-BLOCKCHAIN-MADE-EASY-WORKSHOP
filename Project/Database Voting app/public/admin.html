@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Voting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Admin Control Panel ⚙️</h1>
+        <p class="subtitle">Add candidates and manage the election.</p>
+
+        <div class="admin-section">
+            <h2>Add New Candidate</h2>
+            <form id="addCandidateForm">
+                <input type="text" id="candidateName" placeholder="Enter candidate name" required class="admin-input">
+                <button type="submit" class="vote-btn admin-btn">Add Candidate</button>
+            </form>
+        </div>
+
+        <div class="results admin-section">
+            <h2>Live Results ✨</h2>
+            <div id="resultsContainer">
+                <p>Loading results...</p>
+            </div>
+        </div>
+        
+        <div class="admin-section">
+            <h2>Election Controls</h2>
+            <button id="declareResultsBtn" class="vote-btn admin-btn">Declare Final Results</button>
+            <button id="resetElectionBtn" class="vote-btn admin-btn reset-btn">Reset Election</button>
+        </div>
+
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

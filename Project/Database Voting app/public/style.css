@@ -1,0 +1,89 @@
+/* File: public/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* --- General Styles --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- Main Container --- */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 { color: #333; margin-bottom: 10px; font-weight: 700; }
+p.subtitle { color: #888; margin-bottom: 30px; }
+
+/* --- Header for User Info --- */
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.header h1 { margin-bottom: 0; }
+#userInfo p { margin: 0; font-size: 14px; color: #555; }
+#userInfo a { color: #764ba2; text-decoration: none; font-weight: 600; }
+#userInfo a:hover { text-decoration: underline; }
+
+/* --- Voting Options --- */
+.options { display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px; }
+.option { display: block; background: #f8f9fa; padding: 20px; border-radius: 10px; border: 2px solid #e9ecef; cursor: pointer; transition: all 0.3s ease; text-align: left; }
+.option:hover { border-color: #667eea; transform: translateY(-3px); box-shadow: 0 4px 10px rgba(102, 126, 234, 0.2); }
+input[type="radio"] { margin-right: 15px; transform: scale(1.2); accent-color: #764ba2; }
+
+/* --- Submit Button --- */
+.vote-btn { background: linear-gradient(135deg, #764ba2 0%, #667eea 100%); color: white; border: none; padding: 15px 30px; font-size: 18px; font-weight: 600; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; width: 100%; box-shadow: 0 5px 15px rgba(118, 75, 162, 0.3); }
+.vote-btn:hover:not(:disabled) { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(118, 75, 162, 0.4); }
+.vote-btn:disabled { background: #ccc; cursor: not-allowed; box-shadow: none; }
+
+/* --- Voted Message --- */
+.voted-message {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e9f7ef;
+    border: 1px solid #a7d7c5;
+    color: #1e6043;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* --- NEW: Winner Announcement Style --- */
+.winner-announcement {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fffbe6;
+    border: 2px solid #ffe58f;
+    color: #8a6d3b;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* --- Results Section --- */
+.results { margin-top: 40px; text-align: left; }
+h2 { color: #333; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; margin-bottom: 20px; }
+.result-item { margin-bottom: 20px; }
+.result-info { display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 600; }
+.progress-bar { background-color: #e9ecef; border-radius: 5px; height: 20px; overflow: hidden; }
+.progress { background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); height: 100%; width: 0; border-radius: 5px; transition: width 0.5s ease-in-out; text-align: center; color: white; font-size: 12px; line-height: 20px; }
+
+/* --- Login/Register & Admin Page Styles --- */
+.form-switcher { margin-top: 20px; font-size: 14px; }
+.form-switcher a { color: #764ba2; text-decoration: none; font-weight: 600; }
+.admin-section { margin-top: 40px; padding-top: 20px; border-top: 2px solid #f0f0f0; }
+.admin-input { width: 100%; padding: 15px; font-size: 16px; border-radius: 10px; border: 2px solid #e9ecef; box-sizing: border-box; margin-bottom: 15px; }
+.admin-btn { width: auto; padding: 15px 40px; margin-top: 10px; }
+.reset-btn { background: linear-gradient(135deg, #e53935 0%, #b71c1c 100%); box-shadow: 0 5px 15px rgba(229, 57, 53, 0.3); }
+.reset-btn:hover:not(:disabled) { box-shadow: 0 8px 20px rgba(229, 57, 53, 0.4); }

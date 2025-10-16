@@ -1,0 +1,18 @@
+{
+  "name": "voting-app",
+  "version": "1.0.0",
+  "description": "A live voting application with user authentication.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.15.2"
+  }
+}

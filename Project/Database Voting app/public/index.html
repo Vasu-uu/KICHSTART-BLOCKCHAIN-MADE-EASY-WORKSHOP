@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Voting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="page-title">Cast Your Vote! 🗳️</h1>
+            <div id="userInfo"></div>
+        </div>
+        
+        <div id="winnerAnnouncment" class="winner-announcement" style="display: none;"></div>
+        
+        <p class="subtitle">Select your favorite option below.</p>
+        
+        <form id="voteForm">
+            <div id="optionsContainer" class="options">
+                <p>Loading voting options...</p>
+            </div>
+            <button type="submit" class="vote-btn">Submit My Vote</button>
+        </form>
+
+        <div id="votedMessage" class="voted-message" style="display: none;"></div>
+
+        <div id="resultsSection" class="results" style="display: none;">
+            <h2>Final Results ✨</h2>
+            <div id="resultsContainer">
+                <p>Loading results...</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Voting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="loginView">
+            <h1>Welcome Back! 👋</h1>
+            <p class="subtitle">Please log in to cast your vote.</p>
+            <form id="loginForm">
+                <input type="text" id="loginUsername" placeholder="Username" required class="admin-input">
+                <input type="password" id="loginPassword" placeholder="Password" required class="admin-input">
+                <button type="submit" class="vote-btn">Login</button>
+            </form>
+            <p class="form-switcher">Don't have an account? <a href="#" id="showRegister">Register here</a></p>
+        </div>
+
+        <div id="registerView" style="display: none;">
+            <h1>Create an Account 🚀</h1>
+            <p class="subtitle">Register to participate in the poll.</p>
+            <form id="registerForm">
+                <input type="text" id="registerUsername" placeholder="Choose a Username" required class="admin-input">
+                <input type="password" id="registerPassword" placeholder="Choose a Password" required class="admin-input">
+                <button type="submit" class="vote-btn">Register</button>
+            </form>
+            <p class="form-switcher">Already have an account? <a href="#" id="showLogin">Login here</a></p>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
