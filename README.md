@@ -1,4 +1,4 @@
-## 🚀 Corrected Steps to Run the Application
+## 🚀 Steps to Run the Application
 1️⃣ **Install Dependencies**  
 Open your terminal in the project folder and run:
 ```bash
