@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Decentralized Voting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🗳️ Decentralized Voting</h1>
+    <p class="center-text mb-20">Secure blockchain-based voting system</p>
+
+    <div id="message"></div>
+
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required placeholder="Enter username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required placeholder="Enter password">
+      </div>
+      <button type="submit">Login</button>
+    </form>
+
+    <p class="center-text mt-20" style="color: #666; font-size: 0.9rem;">
+      Demo users: <strong>admin</strong>, <strong>user1</strong> to <strong>user10</strong>
+    </p>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

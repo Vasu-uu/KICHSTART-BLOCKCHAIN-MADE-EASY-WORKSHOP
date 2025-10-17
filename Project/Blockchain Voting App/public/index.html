@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voter Dashboard - Decentralized Voting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🗳️ Voter Dashboard</h1>
+
+    <div class="user-info">
+      <div>
+        <p><strong>Username:</strong> <span id="username"></span></p>
+        <p><strong>Address:</strong> <span id="address"></span></p>
+      </div>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <div id="message"></div>
+
+    <div id="votingStatus"></div>
+
+    <div id="candidatesSection"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

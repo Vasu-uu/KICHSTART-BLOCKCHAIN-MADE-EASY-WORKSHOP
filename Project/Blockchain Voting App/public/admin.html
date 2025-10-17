@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Decentralized Voting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Admin Dashboard</h1>
+
+    <div class="user-info">
+      <div>
+        <p><strong>Username:</strong> <span id="username"></span></p>
+        <p><strong>Address:</strong> <span id="address"></span></p>
+      </div>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <div id="message"></div>
+
+    <h2>Add Candidate</h2>
+    <form id="addCandidateForm">
+      <div class="form-group">
+        <label for="candidateName">Candidate Name</label>
+        <input type="text" id="candidateName" name="candidateName" required placeholder="Enter candidate name">
+      </div>
+      <button type="submit">Add Candidate</button>
+    </form>
+
+    <h2>Current Candidates <span id="electionStatus"></span></h2>
+    <div id="candidatesList"></div>
+
+    <h2>Election Controls</h2>
+    <div class="admin-actions">
+      <button id="declareBtn" onclick="declareResults()">Declare Results</button>
+      <button id="resetBtn" onclick="resetElection()">Reset Election</button>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
