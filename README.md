@@ -126,5 +126,5 @@ USER8_PRIVATE_KEY=PASTE_PRIVATE_KEY_OF_ACCOUNT_9
 ---
 
 ## 👨‍💻 Developed by
-**Vasu**  
-B.Tech Computer Science | Blockchain & Cybersecurity Enthusiast
+**Vasudev V**  
+B.Tech Computer Science | Blockchain & AI Enthusiast
