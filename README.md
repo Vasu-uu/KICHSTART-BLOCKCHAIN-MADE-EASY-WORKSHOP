@@ -56,6 +56,7 @@ npm install
 
 2️⃣ Start Ganache  
 Open the Ganache application to start your local blockchain instance. Make sure it's running on the default RPC server (e.g., http://127.0.0.1:7545).  
+
 3️⃣ Compile the Smart Contract  
 Compile your Solidity code into a JSON artifact by running:  
 truffle compile
@@ -68,6 +69,7 @@ After it finishes, copy the contract address shown in the terminal.
 
 5️⃣ Create and Configure .env File  
 Create a file named .env in the root of the blockchain-voting-app folder. Copy the content from the section below and fill in your contract address and private keys from Ganache.  
+
 6️⃣ Start the Server  
 Run the following command to start your application:  
 node server.js
