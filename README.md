@@ -26,6 +26,7 @@ npm install
 
 2️⃣ Update Database Password  
 Open the server.js file and update your database password and other credentials in the configuration section to match your local database setup.  
+
 3️⃣ Start the Application  
 Run the following command:  
 npm start
