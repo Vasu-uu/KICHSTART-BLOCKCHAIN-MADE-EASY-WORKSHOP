@@ -1,130 +1,123 @@
-# 🗳️ Database & Blockchain Voting Application
+# **🗳️ Database & Blockchain Voting Application**
 
-A dual voting system project featuring both **Database-based Voting** (traditional authentication and storage) and **Blockchain Voting** (secure, transparent, and decentralized) components.
+A dual voting system project featuring both a **Database-based Voting** application for traditional, centralized voting and a **Blockchain-based Voting** application for a secure, transparent, and decentralized alternative.
 
----
+## **🛠️ Prerequisites & Tools**
 
-## 🗃️ Database Voting App
+Both projects are built on Node.js. The blockchain application requires additional tools to build, deploy, and interact with smart contracts.
 
-### 🚀 Steps to Run the Application
+* **Node.js**: Ensure you have Node.js installed to run both servers.  
+* **Ganache**: A personal blockchain for Ethereum development. You'll run this locally to simulate a live blockchain environment. Download here: [https://archive.trufflesuite.com/ganache/](https://archive.trufflesuite.com/ganache/)  
+* **Truffle**: A development framework used to compile and deploy (migrate) your smart contract to the local Ganache blockchain from your terminal. The steps in this guide use Truffle for deployment. Install it globally by running:  
+  npm install \-g truffle
 
-1️⃣ **Install Dependencies**  
-Open your terminal inside the **Database Voting App** folder and run:
-```bash
+* **MetaMask**: A browser extension that works as a crypto wallet and allows the web application to communicate with the blockchain. Get it here: [https://metamask.io/](https://metamask.io/)  
+* **Remix IDE (Alternative for development)**: While this project uses a local setup with Truffle, Remix is an excellent browser-based alternative for writing, debugging, and deploying smart contracts, especially for quick tests. Visit: [https://remix.ethereum.org/](https://remix.ethereum.org/)
+
+## **🗃️ Database Voting App**
+
+A traditional web application for voting with user authentication and data storage in a central database.
+
+### **🚀 Steps to Run the Application**
+
+1️⃣ Install Dependencies  
+Open your terminal inside the database-voting-app folder and run:  
 npm install
-```
 
-2️⃣ **Update Database Password**  
-Open the `server.js` file and update your database password in the configuration section to match your local database credentials.
-
-3️⃣ **Start the Application**  
-Run the following command:
-```bash
+2️⃣ Update Database Password  
+Open the server.js file and update your database password and other credentials in the configuration section to match your local database setup.  
+3️⃣ Start the Application  
+Run the following command:  
 npm start
-```
 
-4️⃣ **Open in Browser**  
-Visit 👉 [http://localhost:3000](http://localhost:3000) to access the application.
+4️⃣ Open in Browser  
+Visit 👉 http://localhost:3001 to access the application. (Note: Port is 3001 to avoid conflict with the blockchain app).
 
-### 🧠 Notes for Database App
-- Ensure your MySQL, PostgreSQL, or MongoDB service is running before starting the server.
-- Update necessary database credentials such as:
-  - Host
-  - User
-  - Password
-  - Database name
-- These values can be modified inside `server.js` or a `.env` file if configured.
+### **🧠 Notes for Database App**
 
----
+* Ensure your MySQL service is running before starting the server.  
+* Update the necessary database credentials in server.js:  
+  * host  
+  * user  
+  * password  
+  * database name  
+* You can create a .env file for better security if you prefer.
 
-## 🧱 Blockchain Voting App
+## **🧱 Blockchain Voting App**
 
-### 🚀 Steps to Run the Application
+A decentralized application (DApp) that leverages a smart contract on a local blockchain to ensure a secure and transparent voting process.
 
-1️⃣ **Install Dependencies**  
-Open your terminal in the project folder and run:
-```bash
+### **🚀 Steps to Run the Application**
+
+1️⃣ Install Dependencies  
+Open your terminal in the blockchain-voting-app folder and run:  
 npm install
-```
 
-2️⃣ **Start Ganache**  
-Open the Ganache application to start your local blockchain.
-
-3️⃣ **Compile the Smart Contract**  
-Compile your Solidity code into a JSON artifact by running:
-```bash
+2️⃣ Start Ganache  
+Open the Ganache application to start your local blockchain instance. Make sure it's running on the default RPC server (e.g., http://127.0.0.1:7545).  
+3️⃣ Compile the Smart Contract  
+Compile your Solidity code into a JSON artifact by running:  
 truffle compile
-```
 
-4️⃣ **Deploy the Smart Contract**  
-Deploy the compiled contract to your running Ganache instance:
-```bash
-truffle migrate --network development
-```
+4️⃣ Deploy the Smart Contract  
+Deploy the compiled contract to your running Ganache instance:  
+truffle migrate \--network development
+
 After it finishes, copy the contract address shown in the terminal.
 
-5️⃣ **Create and Configure .env File**  
-Create a file named `.env` in the root of the project. Copy the content from the section below and fill in your contract address and private keys from Ganache.
-
-6️⃣ **Start the Server**  
-Run the following command to start your application:
-```bash
+5️⃣ Create and Configure .env File  
+Create a file named .env in the root of the blockchain-voting-app folder. Copy the content from the section below and fill in your contract address and private keys from Ganache.  
+6️⃣ Start the Server  
+Run the following command to start your application:  
 node server.js
-```
 
-7️⃣ **Open in Browser**  
-Navigate to 👉 [http://localhost:3000](http://localhost:3000)
+7️⃣ Open in Browser  
+Navigate to 👉 http://localhost:3000
 
-### 🧩 .env File Content
-Create a file named `.env` and paste the following content into it. Replace the placeholders with your actual details.
-```bash
-# Ganache RPC Server URL (usually the default)
-GANACHE_URL=http://127.0.0.1:7545
+### **🧩 .env File Content**
 
-# Paste the contract address from the 'truffle migrate' step
-CONTRACT_ADDRESS=PASTE_YOUR_CONTRACT_ADDRESS_HERE
+Create a file named .env in the blockchain-voting-app directory and paste the following content. Replace the placeholders with your actual details from Ganache.
 
-# Copy the private keys for the first 9 accounts from Ganache
-ADMIN_PRIVATE_KEY=PASTE_PRIVATE_KEY_OF_ACCOUNT_1
-USER1_PRIVATE_KEY=PASTE_PRIVATE_KEY_OF_ACCOUNT_2
-USER2_PRIVATE_KEY=PASTE_PRIVATE_KEY_OF_ACCOUNT_3
-USER3_PRIVATE_KEY=PASTE_PRIVATE_KEY_OF_ACCOUNT_4
-USER4_PRIVATE_KEY=PASTE_PRIVATE_KEY_OF_ACCOUNT_5
-USER5_PRIVATE_KEY=PASTE_PRIVATE_KEY_OF_ACCOUNT_6
-USER6_PRIVATE_KEY=PASTE_PRIVATE_KEY_OF_ACCOUNT_7
-USER7_PRIVATE_KEY=PASTE_PRIVATE_KEY_OF_ACCOUNT_8
-USER8_PRIVATE_KEY=PASTE_PRIVATE_KEY_OF_ACCOUNT_9
-```
+\# Ganache RPC Server URL (usually the default)  
+GANACHE_URL="http://127.0.0.1:7545"
 
-### 🧠 Notes for Blockchain App
-- Ensure Ganache is running before deploying or interacting with smart contracts.
-- If you modify Solidity contracts, re-run:
-  ```bash
-  truffle compile
-  truffle migrate --reset
-  ```
-- Keep your private keys safe—never expose them in public repositories.
+\# Paste the contract address from the 'truffle migrate' step  
+CONTRACT_ADDRESS="Paste the address Here."
 
----
+\# Copy the private key for the admin account from Ganache  
+ADMIN_PRIVATE_KEY="Paste the private key for admin here."
+USER1_PRIVATE_KEY="Paste user 1 private key here."
+USER2_PRIVATE_KEY="Paste user 2 private key here."
+USER3_PRIVATE_KEY="Paste user 3 private key here."
+USER4_PRIVATE_KEY="Paste user 4 private key here."
+USER5_PRIVATE_KEY="Paste user 5 private key here."
 
-## 🪙 Tech Stack
+### **🧠 Notes for Blockchain App**
 
-### Database Voting App
-- Node.js
-- Express.js
-- MySQL / MongoDB
-- HTML / CSS / JavaScript
+* Ensure Ganache is running before deploying or starting the server.  
+* If you modify the Solidity contract, you must re-compile and re-deploy:  
+  truffle compile  
+  truffle migrate \--reset
 
-### Blockchain Voting App
-- Solidity
-- Truffle
-- Ganache
-- Node.js
-- Express.js
-- Web3.js
+* Keep your private keys safe—never expose them in public repositories. Using a .env file helps protect them.
 
----
+## **🪙 Tech Stack**
 
-## 👨‍💻 Developed by
-**Vasudev V**  
+### **Database Voting App**
+
+* **Backend**: Node.js, Express.js  
+* **Database**: MySQL  
+* **Frontend**: HTML, CSS, JavaScript
+
+### **Blockchain Voting App**
+
+* **Blockchain**: Solidity, Ganache  
+* **Framework**: Truffle  
+* **Backend**: Node.js, Express.js  
+* **Libraries**: Web3.js  
+* **Frontend**: HTML, CSS, JavaScript
+
+## **👨‍💻 Developed by**
+
+Vasudev V  
 B.Tech Computer Science | Blockchain & AI Enthusiast
